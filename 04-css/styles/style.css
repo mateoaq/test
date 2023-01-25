@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--background-light);
+}
+
+main {
+  width: 760px;
+  margin: 0 auto;
+}
+
+footer {
+  margin: 130px 0 80px 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--text);
+}
+
+:root {
+  --white: white;
+  --light-1: #3d3d3d;
+  --light-2: #575757;
+  --light-3: #d7d7d7;
+  --light-4: #19191b;
+  --dark-1: #171f26;
+  --dark-2: #0c151d;
+  --dark-3: #a3abb2;
+  --dark-4: #f1f2f4;
+  --text-highContrast: var(--light-1);
+  --text: var(--light-2);
+  --text-button: var(--light-4);
+  --text-button-download: var(--light-1);
+  --text-light: var(--light-1);
+  --active-button: var(--light-3);
+  --yellow: #f7d039;
+  --yellow-light: #ffe071;
+  --border-radious: 10px;
+  --background-light: #e5e5e5;
+}
+
+.theme--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.theme--icon {
+  width: 40px;
+  height: 40px;
+}
+
+.profileInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65px;
+}
+
+.profileInformation {
+  margin: 0 40px;
+}
+
+.profileInformation--name {
+  font-size: 46px;
+  font-weight: 500;
+  color: var(--text-highContrast);
+}
+
+.profileInformation--ocupation {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.profileInfo--picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 215px;
+  height: 215px;
+  border: 4px solid var(--yellow);
+  background-color: #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+.profileInfo--picture img {
+  width: 192px;
+  height: 192px;
+}
+.profileInformation--socialmediaIcons {
+  margin-top: 15px;
+}
+
+.profileInformation--iconContainer {
+  display: flex;
+  gap: 26px;
+}
+
+.profileInformation--iconContainer img {
+  width: 36px;
+  height: 36px;
+}
+
+.profileFacts {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.profileFacts--factText {
+  color: var(--text);
+  font-size: 22px;
+}
+.profileFacts--factValue {
+  color: var(--text-light);
+  font-size: 24px;
+}
+.profileFacts--fact {
+  text-align: center;
+}
+.profileButtons {
+  display: flex;
+  justify-content: center;
+  margin-top: 47px;
+}
+
+.profileButtons--container {
+  display: flex;
+  justify-content: space-between;
+  width: 618px;
+}
+
+.button {
+  width: 290px;
+  height: 80px;
+  border: none;
+  border-radius: var(--border-radious);
+  background-color: var(--white);
+  color: var(--text-button);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 22px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.button--download {
+  background-color: var(--yellow);
+  color: var(--text-button-download);
+  grid-template-columns: 182px 18px;
+}
+.button--download img {
+  width: 26.98px;
+  height: 24px;
+  color: var(--text-button-download);
+}
+
+.tabsButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  background-color: var(--white);
+  border-radius: 20px;
+  margin-top: 86px;
+}
+
+.button--large {
+  width: 351.45px;
+  background-color: inherit;
+}
+
+.active {
+  background-color: var(--active-button);
+}
+
+.tabsContent {
+  width: 757px;
+  height: 100%;
+  margin-top: 76px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  row-gap: 48px;
+}
+
+.tabsContent--itemContent {
+  width: 362px;
+  height: 226px;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  display: none;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  color: var(--text-button-download);
+  background-color: var(--yellow);
+  place-items: center;
+  border-radius: var(--border-radious);
+  opacity: 0.88;
+}
+
+.overlay strong {
+  font-weight: 500;
+  font-size: 22px;
+}
+.overlay--text {
+  width: 287px;
+}
+
+.overlay p {
+  font-size: 14px;
+}
+.overlay > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  background-color: white;
+}
+.tabsContent--itemContent:hover .overlay {
+  display: flex;
+}
+
+.dark {
+  --background-light: var(--dark-2);
+  --text-highContrast: var(--dark-4);
+  --text-light: var(--dark-3);
+  --white: var(--dark-1);
+  --active-button: var(--dark-2);
+  --text-button: var(--dark-3);
+  --yellow: var(--yellow-light);
+  --text: var(--dark-3);
+}
